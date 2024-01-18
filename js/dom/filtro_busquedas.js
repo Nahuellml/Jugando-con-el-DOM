@@ -9,7 +9,7 @@ export default function searchFilters(input, selector) {
       if (e.key === 'Escape') e.target.value = '';
 
       d.querySelectorAll(selector).forEach((el) => 
-        el.textContent.toLowerCase().includes(e.target.value)
+        el.textContent.toLowerCase().includes(e.target.value.toLowerCase())
           ? el.classList.remove('filter')
           : el.classList.add('filter')
       );
